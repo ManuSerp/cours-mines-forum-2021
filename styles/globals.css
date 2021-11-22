@@ -22,3 +22,29 @@ a.special {
 
   display: block; /*hidden, inline, ...*/
 }
+
+label{
+
+
+  color:blue;
+
+
+}
+
+input {
+  font-size: 18px;
+  color:rgb(0, 0, 0)
+
+
+}
+
+div {
+  
+
+
+}#msg_zone{
+  
+}#forum{
+  height: 500px;
+  
+}
