@@ -1,56 +1,65 @@
 import type { NextPage } from "next";
 
+import Message from "../components/Message";
+import MessageList from "../components/MessageList";
+import NewForm from "../components/NewForm";
+
 const Exercise4: NextPage = () => {
   return (
     <>
       <h1>FORUM</h1>
-      <div className="container">
-        <div className="row d-flex flex-column bd-highlight mb-3">
-          <div
-            id="forum"
-            className="p-2 bd-highlight border border-dark rounded"
-          >
-            <div className="panel panel-default"></div>
-          </div>
-
-          <div
-            id="msg_zone"
-            className="mb-3 col-sm-12 col-md-6 p-2 bd-highlight"
-          >
-            <form method="post">
-              <div className="mb-3">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="form-control border border-dark"
-                  placeholder="Name"
-                />
-                <input
-                  type="password"
-                  id="pass"
-                  name="pass"
-                  placeholder="password"
-                  className="form-control border border-dark"
-                />
-                <div className="d-flex flex-row bd-highlight mb-3">
-                  <span className="input-group-text border border-dark">
-                    Message
-                  </span>
-                  <textarea
-                    className="form-control border border-dark"
-                    aria-label="Message"
-                  ></textarea>
+      <div className="container-fluid">
+        <div className="d-flex flex-row">
+          <div>
+            <div id="list" className="list-group">
+              <a
+                href="#"
+                className="list-group-item list-group-item-action flex-column align-items-start active"
+              >
+                <div className="d-flex w-100 justify-content-between">
+                  <h5 className="mb-1">Topic 1</h5>
+                  <small>3 days ago</small>
                 </div>
-                <button type="submit" className="btn btn-primary">
-                  Envoyer
-                </button>
-              </div>
-            </form>
+                <p className="mb-1">description</p>
+              </a>
+              <a
+                href="#"
+                className="list-group-item list-group-item-action flex-column align-items-start bg-warning"
+              >
+                <div className="d-flex w-100 justify-content-between">
+                  <h5 className="mb-1">Topic 2</h5>
+                  <small className="text-muted">3 days ago</small>
+                </div>
+                <p className="mb-1">description</p>
+              </a>
+              <a
+                href="#"
+                className="list-group-item list-group-item-action flex-column align-items-start bg-warning"
+              >
+                <div className="d-flex w-100 justify-content-between">
+                  <h5 className="mb-1">Topic 3</h5>
+                  <small className="text-muted">3 days ago</small>
+                </div>
+                <p className="mb-1">Description </p>
+              </a>
+            </div>
           </div>
-          <div className="mb-3 col-sm-12 col-md-6">
-            <div className="input-group"></div>
+          <div id="fl" className="d-flex flex-column flex-grow-1">
+            <div
+              id="forum"
+              className="p-2 bd-highlight border border-dark rounded flex-grow-1 scroll    "
+            >
+              <MessageList></MessageList>
+            </div>
+
+            <div id="msg_zone" className=" p-2 bd-highlight">
+              <NewForm></NewForm>
+            </div>
+            <div className="mb-3 col-sm-12 col-md-6">
+              <div className="input-group"></div>
+            </div>
           </div>
+          <div id="margin"></div>
         </div>
       </div>
     </>
